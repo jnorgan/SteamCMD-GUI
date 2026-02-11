@@ -490,7 +490,7 @@
     <value>7</value>
   </data>
   <data name="BrowserButton.Text" xml:space="preserve">
-    <value>Browser</value>
+    <value>Browse</value>
   </data>
   <data name="&gt;&gt;BrowserButton.Name" xml:space="preserve">
     <value>BrowserButton</value>
@@ -892,7 +892,7 @@
     <value>0</value>
   </data>
   <data name="ExeBrowserButton.Text" xml:space="preserve">
-    <value>Browser</value>
+    <value>Browse</value>
   </data>
   <data name="&gt;&gt;ExeBrowserButton.Name" xml:space="preserve">
     <value>ExeBrowserButton</value>
@@ -2182,19 +2182,19 @@
     <value>629, 17</value>
   </metadata>
   <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 22</value>
+    <value>182, 22</value>
   </data>
   <data name="ToolStripMenuItem1.Text" xml:space="preserve">
     <value>ToolStripMenuItem1</value>
   </data>
   <data name="ToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 22</value>
+    <value>182, 22</value>
   </data>
   <data name="ToolStripMenuItem2.Text" xml:space="preserve">
     <value>ToolStripMenuItem2</value>
   </data>
   <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 48</value>
+    <value>183, 48</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
     <value>ContextMenuStrip1</value>
@@ -2335,7 +2335,7 @@
     <value>0, 0</value>
   </data>
   <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>609, 24</value>
+    <value>599, 24</value>
   </data>
   <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2458,7 +2458,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>609, 369</value>
+    <value>599, 358</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>615, 397</value>

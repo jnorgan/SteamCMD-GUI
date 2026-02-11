@@ -138,7 +138,7 @@ Public Class MainMenu
         If My.Computer.FileSystem.FileExists("steamcmd.zip") Then
             Status.Text = "The file has already been downloaded!"
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
             SteamCMDDownloadButton.Enabled = True
         Else
@@ -158,7 +158,7 @@ Public Class MainMenu
             Status.Text = "The file 'steamcmd.zip' has been downloaded. Please, unzip it."
             Status.BackColor = Color.FromArgb(240, 240, 240)
             DonwloadBar.Value = 0
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
               Media.SystemSounds.Exclamation)
             SteamCMDDownloadButton.Enabled = True
         End If
@@ -196,7 +196,7 @@ Public Class MainMenu
                 LogMenu.Enabled = False
                 Status.Text = CantFindSteamCMDString
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             End If
         End If
@@ -225,7 +225,7 @@ Public Class MainMenu
         If ServerPath.Text = Nothing Then
             Status.Text = "Please, select a folder for install/update the server."
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
         Else
             Status.Text = "The server will be installed/updated in '" & ServerPath.Text & "'"
@@ -272,7 +272,7 @@ Public Class MainMenu
             If SteamAppID = Nothing Then
                 Status.Text = "Steam App ID not defined"
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             Else
                 If AnonymousCheckBox.Checked = True Then
@@ -287,19 +287,19 @@ Public Class MainMenu
                 If UsernameTextBox.Text = Nothing AndAlso AnonymousCheckBox.Checked = False Then
                     Status.Text = "Please, type your Steam name."
                     Status.BackColor = Color.FromArgb(240, 200, 200)
-                    My.Computer.Audio.PlaySystemSound( _
+                    My.Computer.Audio.PlaySystemSound(
                         Media.SystemSounds.Hand)
                 Else
                     If PasswdTextBox.Text = Nothing AndAlso AnonymousCheckBox.Checked = False Then
                         Status.Text = "Please, type your Steam password. You can install many games as 'anonymous'."
                         Status.BackColor = Color.FromArgb(240, 200, 200)
-                        My.Computer.Audio.PlaySystemSound( _
+                        My.Computer.Audio.PlaySystemSound(
                             Media.SystemSounds.Hand)
                     Else
                         If ServerPath.Text = Nothing Then
                             Status.Text = "Please, select the path where you want to install the server."
                             Status.BackColor = Color.FromArgb(240, 200, 200)
-                            My.Computer.Audio.PlaySystemSound( _
+                            My.Computer.Audio.PlaySystemSound(
                                 Media.SystemSounds.Hand)
                         Else
                             If GoldSrcModInput.Visible = True _
@@ -308,7 +308,7 @@ Public Class MainMenu
                             Else
                                 Status.Text = "Half-Life mod not defined. Installing a default one."
                                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                                My.Computer.Audio.PlaySystemSound( _
+                                My.Computer.Audio.PlaySystemSound(
                                     Media.SystemSounds.Hand)
                             End If
                             ServerPathInstallation = Chr(34) & ServerPath.Text & Chr(34)
@@ -320,7 +320,7 @@ Public Class MainMenu
                                 With (p.StartInfo)
                                     .FileName = SteamCMDExePath & "\steamcmd.exe"
                                     .UseShellExecute = False
-                                    .Arguments = "SteamCmd +login " & Login & " +force_install_dir " & ServerPathInstallation & GoldSrcMod & " +app_update " & SteamAppID & ValidateApp
+                                    .Arguments = "SteamCmd +force_install_dir " & ServerPathInstallation & GoldSrcMod & " +login " & Login & "  +app_update " & SteamAppID & ValidateApp & " +quit"
                                 End With
                                 p.Start()
                             Else
@@ -338,7 +338,7 @@ Public Class MainMenu
         Else
             Status.Text = CantFindSteamCMDString
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
         End If
     End Sub
@@ -414,7 +414,7 @@ Public Class MainMenu
                 RunServerButton.Enabled = False
                 Status.Text = "Can't find the file 'srcds.exe'!"
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             End If
         End If
@@ -507,7 +507,7 @@ Public Class MainMenu
         Else
             Status.Text = "The 'map' folder is empty or doesn't exist!"
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
         End If
     End Sub
@@ -604,19 +604,19 @@ Public Class MainMenu
             If GameMod = Nothing Then
                 Status.Text = "Please, select a game."
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             Else
                 If ServerName = Nothing Then
                     Status.Text = "Please, type a name for the server."
                     Status.BackColor = Color.FromArgb(240, 200, 200)
-                    My.Computer.Audio.PlaySystemSound( _
+                    My.Computer.Audio.PlaySystemSound(
                         Media.SystemSounds.Hand)
                 Else
                     If ServerMap = Nothing Then
                         Status.Text = "Select the default map."
                         Status.BackColor = Color.FromArgb(240, 200, 200)
-                        My.Computer.Audio.PlaySystemSound( _
+                        My.Computer.Audio.PlaySystemSound(
                             Media.SystemSounds.Hand)
                     Else
                         Parameters = DebugMode & SourceTV & ConsoleMode & InsecureMode & NoBots & DevMode
@@ -638,7 +638,7 @@ Public Class MainMenu
         Else
             Status.Text = "Can't find the file 'srcds.exe'!"
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
         End If
     End Sub
@@ -756,7 +756,7 @@ Public Class MainMenu
                 XmlWrt.Close()
                 Status.Text = Path.GetFileName(ConfigFile) & " file saved."
                 Status.BackColor = Color.FromArgb(240, 240, 240)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                   Media.SystemSounds.Exclamation)
             End If
         End If
@@ -856,7 +856,7 @@ Public Class MainMenu
         Else
             Status.Text = "Can't find the server files!"
             Status.BackColor = Color.FromArgb(240, 200, 200)
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
                 Media.SystemSounds.Hand)
         End If
     End Sub
@@ -907,7 +907,7 @@ Public Class MainMenu
             Else
                 Status.Text = "Seems that SourceMod isn't installed."
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             End If
         End If
@@ -960,7 +960,7 @@ Public Class MainMenu
                 End If
                 Status.Text = "SteamCMD closed."
                 Status.BackColor = Color.FromArgb(240, 200, 200)
-                My.Computer.Audio.PlaySystemSound( _
+                My.Computer.Audio.PlaySystemSound(
                     Media.SystemSounds.Hand)
             End If
         Next proc
@@ -1000,14 +1000,14 @@ Public Class MainMenu
         ID = InputBox("Custom Game App ID")
 
         If ("" = Name) Then
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
             Media.SystemSounds.Hand)
             MessageBox.Show("Custom Game Name was not entered.", "Add Custom Game Error")
             Return
         End If
 
         If ("" = ID) Then
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
             Media.SystemSounds.Hand)
             MessageBox.Show("Custom Game ID was not entered.", "Add Custom Game Error")
             Return
@@ -1016,7 +1016,7 @@ Public Class MainMenu
         Dim TestInt As Integer = 0
         Integer.TryParse(ID, TestInt)
         If (TestInt = 0) Then
-            My.Computer.Audio.PlaySystemSound( _
+            My.Computer.Audio.PlaySystemSound(
             Media.SystemSounds.Hand)
             MessageBox.Show("Custom Game ID was not a number (e.x 444880).", "Add Custom Game Error")
             Return
@@ -1061,6 +1061,7 @@ Public Class MainMenu
         GameDictionary.Add("4020", "Garry's Mod")
         GameDictionary.Add("90", "Half-Life Dedicated Server")
         GameDictionary.Add("232370", "Half-Life 2: Deathmatch")
+        GameDictionary.Add("2089300", "Icarus Dedicated Server")
         GameDictionary.Add("510", "Left 4 Dead")
         GameDictionary.Add("222860", "Left 4 Dead 2")
         GameDictionary.Add("232250", "Team Fortress 2")
@@ -1092,5 +1093,9 @@ Public Class MainMenu
         Clipboard.SetText(PublicIP, TextDataFormat.UnicodeText)
         Status.Text = "Public IP copied"
         Status.BackColor = Color.FromArgb(240, 240, 240)
+    End Sub
+
+    Private Sub ExePath_Browser(sender As Object, e As EventArgs) Handles ExePath.Click, ExeBrowserButton.Click
+
     End Sub
 End Class
